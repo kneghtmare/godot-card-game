@@ -1,0 +1,35 @@
+[gd_scene format=2]
+
+[node name="SwordGuy" type="KinematicBody2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Polygon2D2" type="Polygon2D" parent="Node2D"]
+position = Vector2( -2.5, 37.5 )
+antialiased = true
+polygon = PoolVector2Array( -19.5, 3, 7.5, 66.5, 23.5, 64.5, 45, 4.5 )
+
+[node name="Polygon2D3" type="Polygon2D" parent="Node2D"]
+position = Vector2( 21.5, 94 )
+rotation = -0.00905452
+antialiased = true
+polygon = PoolVector2Array( -6.51183, 8.80136, 2.23573, 57.7378, -0.147861, 8.27103 )
+
+[node name="Polygon2D4" type="Polygon2D" parent="Node2D"]
+position = Vector2( 10.9888, 94 )
+rotation = 0.0953748
+antialiased = true
+polygon = PoolVector2Array( -6.51183, 8.80136, -1.07448, 39.2194, 2.23573, 57.7378, -0.147861, 8.27103 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Node2D"]
+antialiased = true
+polygon = PoolVector2Array( -16.5, -11, -16.5, -11, -7, 46, -7, 46, 26, 44.5, 39, -13, 39, -13 )
+
+[node name="Polygon2D5" type="Polygon2D" parent="Node2D"]
+antialiased = true
+polygon = PoolVector2Array( -22.2934, 41.0021, -33.7925, 70.1486, -33.7925, 70.1486, -33.7925, 70.1486, -30.4289, 108.83, -28.3267, 73.0918, -28.3267, 73.0918, -15.7132, 54.1716, -15.7132, 54.1716 )
+
+[node name="Polygon2D6" type="Polygon2D" parent="Node2D"]
+position = Vector2( 68.5331, -0.840897 )
+antialiased = true
+polygon = PoolVector2Array( -29.3403, 52.1315, -21.3443, 70.6475, -13.5661, 108.478, -14.9803, 69.5869, -26.505, 42.1917 )
