@@ -1,0 +1,52 @@
+[gd_scene format=2]
+
+[node name="SwordGuy" type="KinematicBody2D"]
+
+[node name="Polygons" type="Node2D" parent="."]
+
+[node name="Polygon2D2" type="Polygon2D" parent="Polygons"]
+position = Vector2( -2.5, 37.5 )
+antialiased = true
+polygon = PoolVector2Array( -19.5, 3, 7.23756, 66.476, 23.5, 64.5, 45, 4.5 )
+
+[node name="Polygon2D7" type="Polygon2D" parent="Polygons"]
+position = Vector2( -2.5, 37.5 )
+antialiased = true
+polygon = PoolVector2Array( -19.5, 3, 7.23756, 66.476, 23.5, 64.5, 45, 4.5 )
+
+[node name="Polygon2D3" type="Polygon2D" parent="Polygons"]
+position = Vector2( 21.5, 94 )
+rotation = -0.00905452
+antialiased = true
+polygon = PoolVector2Array( -6.51183, 8.80136, 2.23573, 57.7378, -0.722557, 7.09975 )
+
+[node name="Polygon2D4" type="Polygon2D" parent="Polygons"]
+position = Vector2( 10.9888, 94 )
+rotation = 0.0953748
+antialiased = true
+polygon = PoolVector2Array( -5.15515, 10.714, -1.07448, 39.2194, 2.23573, 57.7378, 0.516342, 9.57346 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Polygons"]
+antialiased = true
+polygon = PoolVector2Array( -16.5, -11, -16.5, -11, -5.69286, 37.0789, 31.3484, 37.0789, 39, -13, 39, -13 )
+
+[node name="Polygon2D8" type="Polygon2D" parent="Polygons"]
+position = Vector2( 5.65686, -15.026 )
+color = Color( 0.0666667, 0.0588235, 0.0588235, 1 )
+antialiased = true
+polygon = PoolVector2Array( 11.6157, 14.6364, 13.0299, 31.4302, 20.6313, 30.5463, 21.3384, 15.3435 )
+
+[node name="Polygon2D9" type="Polygon2D" parent="Polygons"]
+position = Vector2( -11.844, -15.026 )
+color = Color( 0.0666667, 0.0588235, 0.0588235, 1 )
+antialiased = true
+polygon = PoolVector2Array( 11.6157, 14.6364, 13.0299, 31.4302, 20.6313, 30.5463, 21.3384, 15.3435 )
+
+[node name="Polygon2D5" type="Polygon2D" parent="Polygons"]
+antialiased = true
+polygon = PoolVector2Array( -21.9201, 40.5553, -33.7925, 70.1486, -33.7925, 70.1486, -33.7925, 70.1486, -30.4289, 108.83, -28.3267, 73.0918, -28.3267, 73.0918, -15.7132, 54.1716, -15.7132, 54.1716 )
+
+[node name="Polygon2D6" type="Polygon2D" parent="Polygons"]
+position = Vector2( 68.5331, -0.840897 )
+antialiased = true
+polygon = PoolVector2Array( -29.3403, 52.1315, -21.3443, 70.6475, -13.5661, 108.478, -14.9803, 69.5869, -26.505, 42.1917 )
