@@ -1,7 +1,6 @@
 class_name DraggableCard
 extends Area2D
 
-
 export (String, FILE) var card_scene_path: String
 
 var play_area_entered := false
@@ -18,7 +17,6 @@ func _ready() -> void:
 	connect("area_entered", self, "_on_area_entered")
 	connect("area_exited", self, "_on_area_exited")	
 	
-	
 
 func _process(delta: float) -> void:
 	if is_dragged:
@@ -26,10 +24,8 @@ func _process(delta: float) -> void:
 	else: # if the player stops dragging and the we are also in play area
 		if play_area_entered:	
 			play()
-		else: #if stops dragging and not in player area
-			get_parent().do_sort()
-			
-
+	
+	
 func play():
 	var instance = card.scene.instance()
 	instance.global_position = global_position

@@ -37,3 +37,13 @@ func sort_children() -> void:
 
 func do_sort() -> void:
 	sort = true
+
+
+func is_children_sorted() -> bool:
+	for i in get_children().size():
+		var child = get_child(i)
+		if child.global_position != possible_positions[i]:
+			return false
+			
+	return true
+
