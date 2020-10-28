@@ -1,18 +1,13 @@
 extends Area2D
-
-
-enum States {
-	SUBSTITUTE,
-	PLAYING
-}
-
+class_name DraggableCard
 
 export (String, FILE) var card_scene_path: String
 
-var state: int = States.SUBSTITUTE
 var play_area_entered := false
 var is_dragged := false
 var card := Card.new()
+
+onready var currentScene: Node = get_tree().current_scene
 
 
 func _ready() -> void:
@@ -24,23 +19,21 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	state_process()
-	
+	if is_dragged:
+		global_position = get_global_mouse_position()
+	else: #if the player stops dragging and the we are also in play area
+		if play_area_entered:	
+			_play()
 
-func state_process() -> void:
-	match state:
-		States.SUBSTITUTE:
-			if is_dragged:
-				global_position = get_global_mouse_position()
-			
-			if play_area_entered:
-				if not is_dragged:
-					set_state(States.PLAYING)
-	
-		States.PLAYING:
-			pass	
-	
-	
+
+#NON IN-BUILT FUNCTIONS
+func _play():
+	var instance = card.scene.instance()
+	instance.global_position = global_position
+	currentScene.add_child(instance)
+	queue_free()
+
+
 #SIGNALS
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
@@ -59,8 +52,3 @@ func _on_area_exited(area: Area2D) -> void:
 	if area.is_in_group("PlayArea"):
 		play_area_entered = false		
 
-
-#SETTTERS AND GETTERS
-func set_state(new_state: int) -> void:
-	if state != new_state:
-		state = new_state
