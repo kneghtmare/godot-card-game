@@ -24,9 +24,6 @@ func _process(delta: float) -> void:
 	else: # if the player stops dragging and the we are also in play area
 		if play_area_entered:	
 			play()
-		
-		if not get_parent().is_sorted():
-			get_parent().do_sort()
 	
 	
 func play():
@@ -38,10 +35,12 @@ func play():
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
-		if event.pressed:
+		if event.pressed and not Globals.is_dragging_something:
 			is_dragged = true
+			Globals.is_dragging_something = true
 		else:
 			is_dragged = false
+			Globals.is_dragging_something = false
 
 
 func _on_area_entered(area: Area2D) -> void:

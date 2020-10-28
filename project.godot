@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "XChildrenSorter",
 "language": "GDScript",
-"path": "res://General/XChildrenSorter.gd"
+"path": "res://General/CardSorter.gd"
 } ]
 _global_script_class_icons={
 "Card": "",
@@ -35,6 +35,10 @@ _global_script_class_icons={
 config/name="game_with_cards"
 run/main_scene="res://General/Game.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Globals="*res://General/Globals.gd"
 
 [input]
 
