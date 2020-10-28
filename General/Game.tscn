@@ -9,9 +9,9 @@ extents = Vector2( 544.412, 235.183 )
 [node name="Game" type="Node2D"]
 
 [node name="XChildrenSorter" type="Node2D" parent="."]
-position = Vector2( 75.5953, 546.806 )
+position = Vector2( 90.0794, 497.449 )
 script = ExtResource( 2 )
-x_unit = 48
+unit = Vector2( 48, 0 )
 
 [node name="DraggableCard" parent="XChildrenSorter" instance=ExtResource( 1 )]
 
@@ -22,10 +22,10 @@ position = Vector2( 100.794, 5.03967 )
 position = Vector2( 196.548, 15.1191 )
 
 [node name="DraggableCard4" parent="XChildrenSorter" instance=ExtResource( 1 )]
-position = Vector2( 502.319, 45.3572 )
+position = Vector2( 259.406, 17.364 )
 
 [node name="DraggableCard5" parent="XChildrenSorter" instance=ExtResource( 1 )]
-position = Vector2( 683.747, -50.3969 )
+position = Vector2( 393.36, 34.5833 )
 
 [node name="PlayArea" type="Area2D" parent="." groups=[
 "PlayArea",

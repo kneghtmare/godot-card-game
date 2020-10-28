@@ -3,8 +3,7 @@ extends Node2D
 
 signal updated_possible_positions
 
-export var x_unit := 16
-export var columns_number := 4
+export var unit := Vector2(16,0)
 
 var possible_positions := []
 var sort := true
@@ -21,8 +20,8 @@ func _process(delta: float) -> void:
 func update_possible_positions() -> void:
 	var current_position := global_position
 	var i = 0
-	while i < columns_number:
-		current_position.x += x_unit
+	while i < get_child_count():
+		current_position += unit
 		possible_positions.append(current_position)
 		i += 1
 
@@ -39,7 +38,7 @@ func do_sort() -> void:
 	sort = true
 
 
-func is_children_sorted() -> bool:
+func is_sorted() -> bool:
 	for i in get_children().size():
 		var child = get_child(i)
 		if child.global_position != possible_positions[i]:

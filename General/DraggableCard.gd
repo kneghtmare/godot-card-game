@@ -24,6 +24,9 @@ func _process(delta: float) -> void:
 	else: # if the player stops dragging and the we are also in play area
 		if play_area_entered:	
 			play()
+		
+		if not get_parent().is_sorted():
+			get_parent().do_sort()
 	
 	
 func play():
