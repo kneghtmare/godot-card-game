@@ -1,4 +1,4 @@
-class_name XChildrenSorter
+class_name CardSorter
 extends Node2D
 
 signal updated_possible_positions
@@ -8,9 +8,14 @@ export var unit := Vector2(16,0)
 var possible_positions := []
 var sort := true
 
+func _init() -> void:
+	Globals.cardSorter = self
+	
 
 func _process(delta: float) -> void:
+	#sorts if sort is true
 	if sort:
+		#sort code
 		update_possible_positions()
 		yield(self, "updated_possible_positions")
 		sort_children()

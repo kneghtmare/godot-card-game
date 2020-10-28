@@ -9,7 +9,6 @@ var card := Card.new()
 
 onready var currentScene: Node = get_tree().current_scene
 
-
 func _ready() -> void:
 	card.scene = load(card_scene_path)
 	# signal connections

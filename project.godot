@@ -14,20 +14,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://CardResources/CardResource.gd"
 }, {
+"base": "Node2D",
+"class": "CardSorter",
+"language": "GDScript",
+"path": "res://General/CardSorter.gd"
+}, {
 "base": "Area2D",
 "class": "DraggableCard",
 "language": "GDScript",
 "path": "res://General/DraggableCard.gd"
-}, {
-"base": "Node2D",
-"class": "XChildrenSorter",
-"language": "GDScript",
-"path": "res://General/CardSorter.gd"
 } ]
 _global_script_class_icons={
 "Card": "",
-"DraggableCard": "",
-"XChildrenSorter": ""
+"CardSorter": "",
+"DraggableCard": ""
 }
 
 [application]
