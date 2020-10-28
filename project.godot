@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "DraggableCard",
 "language": "GDScript",
 "path": "res://General/DraggableCard.gd"
+}, {
+"base": "Node2D",
+"class": "XChildrenSorter",
+"language": "GDScript",
+"path": "res://General/XChildrenSorter.gd"
 } ]
 _global_script_class_icons={
 "Card": "",
-"DraggableCard": ""
+"DraggableCard": "",
+"XChildrenSorter": ""
 }
 
 [application]
