@@ -11,6 +11,7 @@ extents = Vector2( 32, 32 )
 [node name="DraggableCard" type="Area2D" parent="."]
 position = Vector2( 200.013, 169.852 )
 script = ExtResource( 2 )
+card_packed_scene_path = "res://CardScenes/SwordGuy.tscn"
 
 [node name="Sprite" type="Sprite" parent="DraggableCard"]
 texture = ExtResource( 1 )
