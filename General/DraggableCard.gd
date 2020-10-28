@@ -26,7 +26,9 @@ func _process(delta: float) -> void:
 	else: # if the player stops dragging and the we are also in play area
 		if play_area_entered:	
 			play()
-
+		else: #if stops dragging and not in player area
+			get_parent().do_sort()
+			
 
 func play():
 	var instance = card.scene.instance()

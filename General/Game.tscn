@@ -16,17 +16,21 @@ x_unit = 48
 [node name="DraggableCard" parent="XChildrenSorter" instance=ExtResource( 1 )]
 
 [node name="DraggableCard2" parent="XChildrenSorter" instance=ExtResource( 1 )]
+position = Vector2( 100.794, 5.03967 )
 
 [node name="DraggableCard3" parent="XChildrenSorter" instance=ExtResource( 1 )]
+position = Vector2( 196.548, 15.1191 )
 
 [node name="DraggableCard4" parent="XChildrenSorter" instance=ExtResource( 1 )]
+position = Vector2( 502.319, 45.3572 )
 
 [node name="DraggableCard5" parent="XChildrenSorter" instance=ExtResource( 1 )]
+position = Vector2( 683.747, -50.3969 )
 
 [node name="PlayArea" type="Area2D" parent="." groups=[
 "PlayArea",
 ]]
-position = Vector2( -62.3629, 57.0175 )
+position = Vector2( -42.2042, -76.5341 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayArea"]
 position = Vector2( 521.796, 216.028 )
