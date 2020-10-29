@@ -1,55 +1,40 @@
 class_name CardSorter
 extends Node2D
 
-signal updated_possible_positions
+export var unit: Vector2 = Vector2(16,0)
 
-export var unit := Vector2(16,0)
+var card_positions: Array = []
 
-var possible_positions := []
-var sort := true
+onready var children_array: Array = get_children()
+
 
 func _init() -> void:
 	Globals.cardSorter = self
-	
+
+
+func _ready() -> void:
+	sort()
+
 
 func _process(delta: float) -> void:
-	#sorts if sort is true
-	if sort:
-		#sort code
-		update_possible_positions()
-		yield(self, "updated_possible_positions")
-		sort_children()
-		sort = false
-
-	if not Globals.is_dragging_something and not is_sorted():
-		do_sort()
+	if not is_sorted():
+		sort()
 	
 	
-func update_possible_positions() -> void:
+func sort() -> void:
 	var current_position := global_position
 	var i = 0
 	while i < get_child_count():
 		current_position += unit
-		possible_positions.append(current_position)
+		get_child(i).global_position = current_position
+		card_positions.append(current_position)
 		i += 1
-
-	emit_signal("updated_possible_positions")
-
-
-func sort_children() -> void:
-	for i in get_children().size():
-		var child = get_child(i)
-		child.global_position = possible_positions[i]
-
-
-func do_sort() -> void:
-	sort = true
-
+	
 
 func is_sorted() -> bool:
 	for i in get_children().size():
 		var child = get_child(i)
-		if child.global_position != possible_positions[i]:
+		if child.global_position != card_positions[i]:
 			return false
 			
 	return true

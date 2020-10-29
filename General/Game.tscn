@@ -11,7 +11,7 @@ extents = Vector2( 544.412, 235.183 )
 [node name="CardSorter" type="Node2D" parent="."]
 position = Vector2( 90.0794, 497.449 )
 script = ExtResource( 2 )
-unit = Vector2( 48, 0 )
+unit = Vector2( 96, 0 )
 
 [node name="DraggableCard" parent="CardSorter" instance=ExtResource( 1 )]
 

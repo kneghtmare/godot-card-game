@@ -10,9 +10,13 @@ extents = Vector2( 32, 32 )
 position = Vector2( 13.4695, 0 )
 script = ExtResource( 1 )
 card_scene_path = "res://CardScenes/SwordGuy.tscn"
+normal_scale = Vector2( 1, 1 )
+zoomed_scale = Vector2( 1.5, 1.5 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="ZoomTween" type="Tween" parent="."]
