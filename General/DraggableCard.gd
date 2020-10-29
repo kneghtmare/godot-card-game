@@ -67,13 +67,21 @@ func _on_area_exited(area: Area2D) -> void:
 		play_area_entered = false		
 
 
-func _on_mouse_entered() -> void:
+func zoom_in_card() -> void:
 	zoomTween.interpolate_property(self, "scale", scale, zoomed_scale,
 		0.5, Tween.TRANS_QUINT)
 	zoomTween.start()
 
 
-func _on_mouse_exited() -> void:
+func zoom_out_card() -> void:
 	zoomTween.interpolate_property(self, "scale", scale, normal_scale,
 		0.5, Tween.TRANS_QUINT)
 	zoomTween.start()
+
+
+func _on_mouse_entered() -> void:
+	zoom_in_card()
+
+
+func _on_mouse_exited() -> void:
+	zoom_out_card()
