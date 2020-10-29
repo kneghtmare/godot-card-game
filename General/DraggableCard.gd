@@ -24,16 +24,22 @@ func _ready() -> void:
 	
 
 func _process(delta: float) -> void:
+	card_process()
+	
+
+func card_process() -> void:
 	if is_dragged:
 		global_position = get_global_mouse_position()
+		return
 	else: # if the player stops dragging and the we are also in play area
 		if play_area_entered:	
 			play()
+			return
 			
 		if not get_parent() is CardSorter:
 			Globals.reparent(self, Globals.cardSorter)
-		
-		
+			return
+	
 	
 func play():
 	var instance = card.scene.instance()
